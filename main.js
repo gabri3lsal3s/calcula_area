@@ -1,10 +1,14 @@
 let result;
 let i = 0;
 let metric_value = document.querySelector('#m').textContent;
-let metric = document.querySelector('header nav');
-let forms_quadrado = document.querySelector('#quadrado');
-let forms_circulo = document.querySelector('#circulo');
-let forms_triangulo = document.querySelector('#triangulo');
+let metric = document.querySelector('#metrics_options');
+const forms_quadrado = document.querySelector('#quadrado');
+const forms_circulo = document.querySelector('#circulo');
+const forms_triangulo = document.querySelector('#triangulo');
+const focus_quadrado = document.querySelector('#quadrado');
+const focus_circulo = document.querySelector('#circulo');
+const focus_triangulo = document.querySelector('#triangulo');
+
 
 addEventListener('submit', function(e){
     e.preventDefault();
@@ -67,10 +71,6 @@ forms_triangulo.addEventListener('submit', function(){
     const mostra_resultado = document.querySelector('#resultado_triangulo')
     mostra_resultado.textContent = result + metric_value;
 })
-
-const focus_quadrado = document.querySelector('#quadrado');
-const focus_circulo = document.querySelector('#circulo');
-const focus_triangulo = document.querySelector('#triangulo');
 
 focus_quadrado.addEventListener('mouseover', function(){
     const link_quadrado = document.querySelector('#link_quadrado');
