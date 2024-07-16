@@ -68,6 +68,36 @@ forms_triangulo.addEventListener('submit', function(){
     mostra_resultado.textContent = result + metric_value;
 })
 
+const focus_quadrado = document.querySelector('#quadrado');
+const focus_circulo = document.querySelector('#circulo');
+const focus_triangulo = document.querySelector('#triangulo');
+
+focus_quadrado.addEventListener('mouseover', function(){
+    const link_quadrado = document.querySelector('#link_quadrado');
+    link_quadrado.classList.add('clicked_btn');
+    while (document.querySelector('#link_triangulo').classList.contains('clicked_btn') || document.querySelector('#link_circulo').classList.contains('clicked_btn')) {
+        document.getElementById('link_triangulo').classList.remove('clicked_btn');
+        document.getElementById('link_circulo').classList.remove('clicked_btn');
+    }
+});
+
+focus_circulo.addEventListener('mouseover', function(){
+    const link_circulo = document.querySelector('#link_circulo');
+    link_circulo.classList.add('clicked_btn');
+    while (document.querySelector('#link_triangulo').classList.contains('clicked_btn') || document.querySelector('#link_quadrado').classList.contains('clicked_btn')) {
+        document.getElementById('link_triangulo').classList.remove('clicked_btn');
+        document.getElementById('link_quadrado').classList.remove('clicked_btn');
+    }
+});
+
+focus_triangulo.addEventListener('mouseover', function(){
+    const link_triangulo = document.querySelector('#link_triangulo');
+    link_triangulo.classList.add('clicked_btn');
+    while (document.querySelector('#link_circulo').classList.contains('clicked_btn') || document.querySelector('#link_quadrado').classList.contains('clicked_btn')) {
+        document.getElementById('link_circulo').classList.remove('clicked_btn');
+        document.getElementById('link_quadrado').classList.remove('clicked_btn');
+    }
+});
 
 const video = document.querySelector('#video')
 const i_ = function () {
