@@ -8,6 +8,7 @@ const forms_triangulo = document.querySelector('#triangulo');
 const focus_quadrado = document.querySelector('#quadrado');
 const focus_circulo = document.querySelector('#circulo');
 const focus_triangulo = document.querySelector('#triangulo');
+const video = document.querySelector('#video')
 
 
 addEventListener('submit', function(e){
@@ -99,9 +100,8 @@ focus_triangulo.addEventListener('mouseover', function(){
     }
 });
 
-const video = document.querySelector('#video')
 const i_ = function () {
-    if(i>=10) {
+    if(i>=50) {
         document.querySelector('.i').classList.remove('i');
         window.scrollTo({
             top: document.body.scrollHeight,
