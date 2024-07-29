@@ -101,7 +101,7 @@ focus_triangulo.addEventListener('mouseover', function(){
 });
 
 const i_ = function () {
-    if(i>=50) {
+    if(i>=10) {
         document.querySelector('.i').classList.remove('i');
         window.scrollTo({
             top: document.body.scrollHeight,
